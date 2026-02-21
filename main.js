@@ -21,6 +21,7 @@ else if (difficultyLevel == 3) {
 else {
     console.log("Error selecting difficulty...")
 }
+console.log("Let's start the game!");
 
 
 //get random number
