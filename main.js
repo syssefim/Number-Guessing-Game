@@ -80,13 +80,16 @@ do {
             console.log(`Congratulations! You guessed the correct number in ${numAttempts} attempts and ${elapsedTime} seconds.`);
             break;
         }
-        else if (guess != randomNumber) {
+        else if (guess != randomNumber && numTries - numAttempts != 0) {
             if (guess > randomNumber) {
                 console.log(`Incorrect! The number is less than ${guess}.`)
             }
             else if (guess < randomNumber) {
                 console.log(`Incorrect! The number is greater than ${guess}.`)
             }
+        }
+        else if (guess != randomNumber && numTries - numAttempts == 0) {
+            console.log(`Game over! You've used all your chances. The correct number was ${randomNumber}.`)
         }
     }
 
