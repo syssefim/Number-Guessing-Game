@@ -1,5 +1,5 @@
 const prompt = require('prompt-sync')();
-
+const chalk = require('chalk');
 
 
 
@@ -7,9 +7,9 @@ const prompt = require('prompt-sync')();
 
 function getDifficulty() {
     console.log("\nPlease select the difficulty level:")
-    console.log("1. Easy (10 chances)")
-    console.log("2. Medium (5 chances)")
-    console.log("3. Hard (3 chances)\n")
+    console.log(chalk.green("1. Easy (10 chances)"))
+    console.log(chalk.yellow("2. Medium (5 chances)"))
+    console.log(chalk.red("3. Hard (3 chances)\n"))
     const difficultyLevel = prompt("Enter your choice: ");
 
     
@@ -58,7 +58,7 @@ do {
 
     //get random number
     randomNumber = Math.floor(Math.random() * 100);
-    console.log(randomNumber)
+    //console.log(randomNumber)
 
 
     //start timer
